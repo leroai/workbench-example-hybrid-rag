@@ -99,11 +99,15 @@ execution:
       url: http://localhost:8080/
   resources:
     gpu:
-      requested: 1
+      requested: 0
     sharedMemoryMB: 4096
   secrets:
   - variable: NVCF_RUN_KEY
     description: NVCF Run Key for Cloud Inference
+  - variable: HUGGING_FACE_HUB_TOKEN
+    description: ""
+  - variable: NGC_CLI_API_KEY
+    description: ""
   mounts:
   - type: project
     target: /project/
